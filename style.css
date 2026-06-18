@@ -19,166 +19,61 @@ body{
     margin: 20px;
     margin-bottom: 0;
 }
+
+.allclear , .multiply , .divide ,
+.one , .two , .three , .add ,
+.four , .five , .six , .subtract ,
+.seven , .eight , .nine ,
+.zero , .dot , .equalto {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid yellowgreen;
+}
+
+.multiply , .divide ,
+.one , .two , .three , .add ,
+.four , .five , .six , .subtract ,
+.seven , .eight , .nine , 
+.dot ,.equalto {
+    width: 50px;
+}
+
+.allclear , .multiply , .divide , 
+.one , .two , .three , .add ,
+.four , .five , .six , .subtract ,
+.seven , .eight , .nine ,
+.zero , .dot {
+    height: 40px;
+}
+
+.multiply , .divide , 
+.two , .three , .add ,
+.five , .six , .subtract ,
+.eight , .nine , .dot ,
+.equalto {
+    margin-left: 5px;
+}
+
+.divide , .add , 
+.subtract , .equalto{
+    margin-right: 20px;
+}
+.one , .four , 
+.seven , .zero ,
 .allclear{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    margin-left: 20px;    
+}
+
+.allclear{
     width: 110px;
-    height: 40px;
-    border: 2px solid yellowgreen;
-    margin-left: 20px;
-}
-.multiply{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 50px;
-    height: 40px;
-    border: 2px solid yellowgreen;
-    margin-left: 5px;
-}
-.divide{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 50px;
-    height: 40px;
-    border: 2px solid yellowgreen;
-    margin-left: 5px;
-    margin-right: 20px;
-}
-.one{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 50px;
-    height: 40px;
-    border: 2px solid yellowgreen;
-    margin-left: 20px;
-    
-}
-.two{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 50px;
-    height: 40px;
-    border: 2px solid yellowgreen;
-    margin-left: 5px;
-}
-.three{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 50px;
-    height: 40px;
-    border: 2px solid yellowgreen;
-    margin-left: 5px;
-}
-.add{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 50px;
-    height: 40px;
-    border: 2px solid yellowgreen;
-    margin-left: 5px;
-    margin-right: 20px;
-}
-.four{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 50px;
-    height: 40px;
-    border: 2px solid yellowgreen;
-    margin-left: 20px;
-    
-}
-.five{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 50px;
-    height: 40px;
-    border: 2px solid yellowgreen;
-    margin-left: 5px;
-}
-.six{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 50px;
-    height: 40px;
-    border: 2px solid yellowgreen;
-    margin-left: 5px;
-}
-.subtract{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 50px;
-    height: 40px;
-    border: 2px solid yellowgreen;
-    margin-left: 5px;
-    margin-right: 20px;
-}
-.seven{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 50px;
-    height: 40px;
-    border: 2px solid yellowgreen;
-    margin-left: 20px;   
-}
-.eight{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 50px;
-    height: 40px;
-    border: 2px solid yellowgreen;
-    margin-left: 5px;
-}
-.nine{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 50px;
-    height: 40px;
-    border: 2px solid yellowgreen;
-    margin-left: 5px;
 }
 .zero{
-    display: flex;
-    justify-content: center;
-    align-items: center;
     width: 108px;
-    height: 40px;
-    border: 2px solid yellowgreen;
-    margin-left: 20px;
-}
-.dot{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 50px;
-    height: 40px;
-    border: 2px solid yellowgreen;
-    margin-left: 5px;
 }
 .equalto{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 50px;
     height: 93px;
-    border: 2px solid yellowgreen;
-    margin-left: 5px;
-    margin-right: 20px;
     margin-top: -53px;
 }
 
 
-/*clean up the css code and give it structure before moving to next part.
