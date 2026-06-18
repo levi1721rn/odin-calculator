@@ -2,6 +2,8 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: antiquewhite;
+
 }
 
 .calculator{
@@ -11,6 +13,7 @@ body{
     border: 5px solid black;
     width: 270px;
     height: 380px;
+    background-color: beige;
 }
 .panel{
     width: 230px;
@@ -18,6 +21,7 @@ body{
     border: 2px solid peachpuff;
     margin: 20px;
     margin-bottom: 0;
+    background-color: aliceblue;
 }
 
 .allclear , .multiply , .divide ,
@@ -29,6 +33,7 @@ body{
     justify-content: center;
     align-items: center;
     border: 2px solid yellowgreen;
+    background-color: azure;
 }
 
 .multiply , .divide ,
