@@ -1,100 +1,141 @@
 function add(a,b){
-    return (a+b);
+    display.textContent = (a+b);
 }
 
 function subtract(a,b){
-    return (a-b);
+    display.textContent = (a-b);
 }
 
 function multiply(a,b){
-    return (a*b);
+    display.textContent = (a*b);
 }
 
 function divide(a,b){
-    return (a/b);
+    display.textContent = (a/b);
 }
 
-let number1;
-let operator;
+let number1 ;
+let operator = null;
 let number2;
 
 function operate(operator){
-    switch (operator){
-        case "+":
-            add(number1,number2);
-            break;
-        case "-":
-            subtract(number1,number2);
-            break;
-        case "*":
-            multiply(number1,number2);
-            break;
-        case "/":
-            divide(number1,number2);
-            break;
-        default :
-            return "";
+    if (operator === '+'){
+        return add(number1,number2);
     }
+    else if (operator === '-'){
+        return subtract(number1,number2);
+    }
+    else if(operator === '*'){
+        return multiply(number1,number2);
+    }
+    else if(operator === '/'){
+        return divide(number1,number2);
+    }
+        return "";
 }
 
 let display = document.querySelector('.panel');
+display.textContent = "";
 
 let one = document.querySelector('.one');
 one.addEventListener('click' , () => {
-    number1 = 1;
-    display.textContent = '1';
+    display.textContent += '1';
 })
 
 let two = document.querySelector('.two');
 two.addEventListener('click' , () => {
-    number1 = 2;
-    display.textContent = '2';
+    display.textContent += '2';
 })
 
 let three = document.querySelector('.three');
 three.addEventListener('click' , () => {
-    number1 = 3;
-    display.textContent = '3';
+    display.textContent += '3';
 })
 
 let four = document.querySelector('.four');
 four.addEventListener('click' , () => {
-    number1 = 4;
-    display.textContent = '4';
+    display.textContent += '4';
 })
 
 let five = document.querySelector('.five');
 five.addEventListener('click' , () => {
-    number1 = 5;
-    display.textContent = '5';
+    display.textContent += '5';
 })
 
 let six = document.querySelector('.six');
 six.addEventListener('click' , () => {
-    number1 = 6;
-    display.textContent = '6';
+    display.textContent += '6';
 })
 
 let seven = document.querySelector('.seven');
 seven.addEventListener('click' , () => {
-    number1 = 7;
-    display.textContent = '7';
+    display.textContent += '7';
 })
 
 let eight = document.querySelector('.eight');
 eight.addEventListener('click' , () => {
-    number1 = 8;
-    display.textContent = '8';
+    display.textContent += '8';
 })
 
 let nine = document.querySelector('.nine');
 nine.addEventListener('click' , () => {
-    number1 = 9;
-    display.textContent = '9';
+    display.textContent += '9';
 })
 
 let zero = document.querySelector('.zero');
 zero.addEventListener('click' , () => {
-    number1 = 0;
-    display.textContent = '0';
+    display.textContent += '0';
 })
+
+let clear = document.querySelector('.allclear');
+clear.addEventListener('click' , () => {
+    display.textContent = '';
+})
+
+let mul = document.querySelector('.multiply');
+mul.addEventListener('click' , () => {
+    let num1 = display.textContent;
+    number1 = Number(num1);
+   
+    operator = '*';    
+
+    display.textContent = '';
+})
+
+let divid = document.querySelector('.divide');
+divid.addEventListener('click' , () => {
+    let num1 = display.textContent;
+    number1 = Number(num1);
+   
+    operator = '/';    
+
+    display.textContent = '';
+})
+
+let addition = document.querySelector('.add');
+addition.addEventListener('click' , () => {
+    let num1 = display.textContent;
+    number1 = Number(num1);
+   
+    operator = '+';    
+
+    display.textContent = '';
+})
+
+let minus = document.querySelector('.subtract');
+minus.addEventListener('click' , () => {
+    let num1 = display.textContent;
+    number1 = Number(num1);
+   
+    operator = '-';    
+
+    display.textContent = '';
+})
+
+let equalto = document.querySelector('.equalto');
+equalto.addEventListener('click', () =>{
+    let num2 = display.textContent;
+    number2 = Number(num2);
+
+    operate(operator);
+});
