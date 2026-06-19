@@ -25,6 +25,12 @@ body{
     margin: 20px;
     margin-bottom: 0;
     background-color: aliceblue;
+    width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+    white-space: nowrap;
+    text-align: right;
+    padding: 10px;
 }
 
 .allclear , .multiply , .divide ,
@@ -80,8 +86,8 @@ body{
     width: 108px;
 }
 .equalto{
-    height: 93px;
-    margin-top: -53px;
+    height: 100px;
+    margin-top: -60px;
 }
 
 
