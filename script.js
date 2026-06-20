@@ -1,37 +1,20 @@
-function add(a,b){
-    display.textContent = (a+b);
-}
-
-function subtract(a,b){
-    display.textContent = (a-b);
-}
-
-function multiply(a,b){
-    display.textContent = (a*b);
-}
-
-function divide(a,b){
-    display.textContent = (a/b);
-}
-
 let number1 ;
 let operator = null;
 let number2;
 
 function operate(operator){
     if (operator === '+'){
-        return add(number1,number2);
+        display.textContent = (number1 + number2);
     }
     else if (operator === '-'){
-        return subtract(number1,number2);
+        display.textContent = (number1 - number2);
     }
     else if(operator === '*'){
-        return multiply(number1,number2);
+        display.textContent = (number1 * number2);
     }
     else if(operator === '/'){
-        return divide(number1,number2);
+        display.textContent = (number1 / number2);
     }
-        return "";
 }
 
 let display = document.querySelector('.panel');
@@ -39,97 +22,218 @@ display.textContent = "";
 
 let one = document.querySelector('.one');
 one.addEventListener('click' , () => {
+
+    if(number1 !== null && number2 !== null &&
+       display.textContent !== '' && operator !== null){
+           display.textContent = '';
+           number2 = null;
+    }
+
     display.textContent += '1';
 })
 
 let two = document.querySelector('.two');
 two.addEventListener('click' , () => {
+
+    if(number1 !== null && number2 !== null &&
+       display.textContent !== '' && operator !== null){
+           display.textContent = '';
+           number2 = null;
+    }
+
     display.textContent += '2';
 })
 
 let three = document.querySelector('.three');
 three.addEventListener('click' , () => {
+
+    if(number1 !== null && number2 !== null &&
+       display.textContent !== '' && operator !== null){
+           display.textContent = '';
+           number2 = null;
+    }
+
     display.textContent += '3';
 })
 
 let four = document.querySelector('.four');
 four.addEventListener('click' , () => {
+
+    if(number1 !== null && number2 !== null &&
+       display.textContent !== '' && operator !== null){
+           display.textContent = '';
+           number2 = null;
+    }
+
     display.textContent += '4';
 })
 
 let five = document.querySelector('.five');
 five.addEventListener('click' , () => {
+
+    if(number1 !== null && number2 !== null &&
+       display.textContent !== '' && operator !== null){
+           display.textContent = '';
+           number2 = null;
+    }
+
     display.textContent += '5';
 })
 
 let six = document.querySelector('.six');
 six.addEventListener('click' , () => {
+
+    if(number1 !== null && number2 !== null &&
+       display.textContent !== '' && operator !== null){
+           display.textContent = '';
+           number2 = null;
+    }
+
     display.textContent += '6';
 })
 
 let seven = document.querySelector('.seven');
 seven.addEventListener('click' , () => {
+
+    if(number1 !== null && number2 !== null &&
+       display.textContent !== '' && operator !== null){
+           display.textContent = '';
+           number2 = null;
+    }
+
     display.textContent += '7';
 })
 
 let eight = document.querySelector('.eight');
 eight.addEventListener('click' , () => {
+
+    if(number1 !== null && number2 !== null &&
+       display.textContent !== '' && operator !== null){
+           display.textContent = '';
+           number2 = null;
+    }
+
     display.textContent += '8';
 })
 
 let nine = document.querySelector('.nine');
 nine.addEventListener('click' , () => {
+
+    if(number1 !== null && number2 !== null &&
+       display.textContent !== '' && operator !== null){
+           display.textContent = '';
+           number2 = null;
+    }
+
     display.textContent += '9';
 })
 
 let zero = document.querySelector('.zero');
 zero.addEventListener('click' , () => {
+    
+    if(number1 !== null && number2 !== null &&
+       display.textContent !== '' && operator !== null){
+           display.textContent = '';
+           number2 = null;
+    }
+
     display.textContent += '0';
 })
 
 let clear = document.querySelector('.allclear');
 clear.addEventListener('click' , () => {
     display.textContent = '';
+    number1 = null;
+    number2 = null;
+    operator = null;
 })
 
 let mul = document.querySelector('.multiply');
 mul.addEventListener('click' , () => {
-    let num1 = display.textContent;
-    number1 = Number(num1);
+    if(operator !== null){
+        number2 = Number(display.textContent);
+
+        operate(operator);
+
+        number1 = Number(display.textContent);
+        
+        operator = '*';
+    }
+    else{
+    number1 = Number(display.textContent);
    
     operator = '*';    
+    }
 
-    display.textContent = '';
+    if(number2 === null){
+        display.textContent = '';
+    }
 })
 
 let divid = document.querySelector('.divide');
 divid.addEventListener('click' , () => {
-    let num1 = display.textContent;
-    number1 = Number(num1);
+     if(operator !== null){
+        number2 = Number(display.textContent);
+
+        operate(operator);
+
+        number1 = Number(display.textContent);
+
+        operator = '/';
+    }
+    else{
+    number1 = Number(display.textContent);
    
     operator = '/';    
+    }
 
-    display.textContent = '';
+    if(number2 === null){
+        display.textContent = '';
+    }
 })
 
 let addition = document.querySelector('.add');
 addition.addEventListener('click' , () => {
-    let num1 = display.textContent;
-    number1 = Number(num1);
-   
-    operator = '+';    
+     if(operator !== null){
+        number2 = Number(display.textContent);
 
-    display.textContent = '';
+        operate(operator);
+
+        number1 = Number(display.textContent);
+
+        operator = '+';
+    }
+    else{
+    number1 = Number(display.textContent);
+   
+    operator = '+'; 
+    }
+    
+    if(number2 === null){
+        display.textContent = '';
+    }
 })
 
 let minus = document.querySelector('.subtract');
 minus.addEventListener('click' , () => {
-    let num1 = display.textContent;
-    number1 = Number(num1);
-   
-    operator = '-';    
+    if(operator !== null){
+        number2 = Number(display.textContent);
 
-    display.textContent = '';
+        operate(operator);
+
+        number1 = Number(display.textContent);
+        
+        operator = '-';
+    }
+    else{
+    number1 = Number(display.textContent);
+   
+    operator = '-';   
+    }
+    
+    if(number2 === null){
+        display.textContent = '';
+    }
 })
 
 let equalto = document.querySelector('.equalto');
