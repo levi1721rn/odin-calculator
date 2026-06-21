@@ -13,8 +13,17 @@ function operate(operator){
         display.textContent = Number((number1 * number2).toFixed(2));
     }
     else if(operator === '/'){
+        if(number2 === 0){
+            alert("Can't divide by zero");
+             display.textContent = '';
+             number1 = null;
+             number2 = null;
+              operator = null;
+        }
+        else{
         display.textContent = Number((number1 / number2).toFixed(2));
     }
+}
 }
 
 let display = document.querySelector('.panel');
