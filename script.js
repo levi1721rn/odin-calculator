@@ -180,12 +180,12 @@ mul.addEventListener('click' , () => {
             operate(operator);
 
             number1 = Number(display.textContent);
-        
+            display.textContent = '';
             operator = '*';
         }
         else{
             number1 = Number(display.textContent);
-   
+            display.textContent = '';
             operator = '*';    
         }
 
@@ -207,12 +207,12 @@ divid.addEventListener('click' , () => {
             operate(operator);
 
             number1 = Number(display.textContent);
-
+            display.textContent = '';
             operator = '/';
         }
         else{
             number1 = Number(display.textContent);
-   
+            display.textContent = '';
             operator = '/';    
         }
 
@@ -234,12 +234,12 @@ addition.addEventListener('click' , () => {
             operate(operator);
 
             number1 = Number(display.textContent);
-
+            display.textContent = '';
             operator = '+';
         }
         else{
             number1 = Number(display.textContent);
-   
+            display.textContent = '';
             operator = '+'; 
         }
     
@@ -261,12 +261,12 @@ minus.addEventListener('click' , () => {
             operate(operator);
 
             number1 = Number(display.textContent);
-        
+            display.textContent = '';
             operator = '-';
         }
         else{   
             number1 = Number(display.textContent);
-   
+            display.textContent = '';
             operator = '-';   
         }
     
