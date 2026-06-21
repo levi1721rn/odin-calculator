@@ -35,7 +35,9 @@ one.addEventListener('click' , () => {
     if(number1 !== null && number2 !== null &&
        display.textContent !== '' && operator !== null){
            display.textContent = '';
+           number1 = null;
            number2 = null;
+           operator = null;
     }
 
     display.textContent += '1';
@@ -47,9 +49,10 @@ two.addEventListener('click' , () => {
     if(number1 !== null && number2 !== null &&
        display.textContent !== '' && operator !== null){
            display.textContent = '';
+           number1 = null;
            number2 = null;
+           operator = null;
     }
-
     display.textContent += '2';
 })
 
@@ -59,7 +62,9 @@ three.addEventListener('click' , () => {
     if(number1 !== null && number2 !== null &&
        display.textContent !== '' && operator !== null){
            display.textContent = '';
+           number1 = null;
            number2 = null;
+           operator = null;
     }
 
     display.textContent += '3';
@@ -71,7 +76,9 @@ four.addEventListener('click' , () => {
     if(number1 !== null && number2 !== null &&
        display.textContent !== '' && operator !== null){
            display.textContent = '';
+           number1 = null;
            number2 = null;
+           operator = null;
     }
 
     display.textContent += '4';
@@ -83,7 +90,9 @@ five.addEventListener('click' , () => {
     if(number1 !== null && number2 !== null &&
        display.textContent !== '' && operator !== null){
            display.textContent = '';
+           number1 = null;
            number2 = null;
+           operator = null;
     }
 
     display.textContent += '5';
@@ -95,7 +104,9 @@ six.addEventListener('click' , () => {
     if(number1 !== null && number2 !== null &&
        display.textContent !== '' && operator !== null){
            display.textContent = '';
+           number1 = null;
            number2 = null;
+           operator = null;
     }
 
     display.textContent += '6';
@@ -107,7 +118,9 @@ seven.addEventListener('click' , () => {
     if(number1 !== null && number2 !== null &&
        display.textContent !== '' && operator !== null){
            display.textContent = '';
+           number1 = null;
            number2 = null;
+           operator = null;
     }
 
     display.textContent += '7';
@@ -119,7 +132,9 @@ eight.addEventListener('click' , () => {
     if(number1 !== null && number2 !== null &&
        display.textContent !== '' && operator !== null){
            display.textContent = '';
+           number1 = null;
            number2 = null;
+           operator = null;
     }
 
     display.textContent += '8';
@@ -131,7 +146,9 @@ nine.addEventListener('click' , () => {
     if(number1 !== null && number2 !== null &&
        display.textContent !== '' && operator !== null){
            display.textContent = '';
+           number1 = null;
            number2 = null;
+           operator = null;
     }
 
     display.textContent += '9';
@@ -143,7 +160,9 @@ zero.addEventListener('click' , () => {
     if(number1 !== null && number2 !== null &&
        display.textContent !== '' && operator !== null){
            display.textContent = '';
+           number1 = null;
            number2 = null;
+           operator = null;
     }
 
     display.textContent += '0';
@@ -269,6 +288,5 @@ let equalto = document.querySelector('.equalto');
 equalto.addEventListener('click', () =>{
     let num2 = display.textContent;
     number2 = Number(num2);
-
     operate(operator);
 });
