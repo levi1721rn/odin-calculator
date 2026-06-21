@@ -18,7 +18,7 @@ function operate(operator){
              display.textContent = '';
              number1 = null;
              number2 = null;
-              operator = null;
+             operator = null;
         }
         else{
         display.textContent = Number((number1 / number2).toFixed(2));
@@ -159,89 +159,109 @@ clear.addEventListener('click' , () => {
 
 let mul = document.querySelector('.multiply');
 mul.addEventListener('click' , () => {
-    if(operator !== null){
-        number2 = Number(display.textContent);
-
-        operate(operator);
-
-        number1 = Number(display.textContent);
-        
+    if(number2 === null && display.textContent === ''){
         operator = '*';
     }
     else{
-    number1 = Number(display.textContent);
-   
-    operator = '*';    
-    }
+        if(operator !== null){
+            number2 = Number(display.textContent);
 
-    if(number2 === null){
-        display.textContent = '';
-    }
+            operate(operator);
+
+            number1 = Number(display.textContent);
+        
+            operator = '*';
+        }
+        else{
+            number1 = Number(display.textContent);
+   
+            operator = '*';    
+        }
+
+        if(number2 === null){
+            display.textContent = '';
+        }
+    }    
 })
 
 let divid = document.querySelector('.divide');
 divid.addEventListener('click' , () => {
-     if(operator !== null){
-        number2 = Number(display.textContent);
-
-        operate(operator);
-
-        number1 = Number(display.textContent);
-
+    if(number2 === null && display.textContent === ''){
         operator = '/';
     }
     else{
-    number1 = Number(display.textContent);
-   
-    operator = '/';    
-    }
+        if(operator !== null){
+            number2 = Number(display.textContent);
 
-    if(number2 === null){
-        display.textContent = '';
-    }
+            operate(operator);
+
+            number1 = Number(display.textContent);
+
+            operator = '/';
+        }
+        else{
+            number1 = Number(display.textContent);
+   
+            operator = '/';    
+        }
+
+        if(number2 === null){
+            display.textContent = '';
+        }
+    }    
 })
 
 let addition = document.querySelector('.add');
-addition.addEventListener('click' , () => {
-     if(operator !== null){
-        number2 = Number(display.textContent);
-
-        operate(operator);
-
-        number1 = Number(display.textContent);
-
+addition.addEventListener('click' , () => {    
+    if(number2 === null && display.textContent === ''){
         operator = '+';
     }
     else{
-    number1 = Number(display.textContent);
+        if(operator !== null){
+            number2 = Number(display.textContent);
+
+            operate(operator);
+
+            number1 = Number(display.textContent);
+
+            operator = '+';
+        }
+        else{
+            number1 = Number(display.textContent);
    
-    operator = '+'; 
-    }
+            operator = '+'; 
+        }
     
-    if(number2 === null){
-        display.textContent = '';
+        if(number2 === null){
+            display.textContent = '';
+        }
     }
 })
 
 let minus = document.querySelector('.subtract');
 minus.addEventListener('click' , () => {
-    if(operator !== null){
-        number2 = Number(display.textContent);
-
-        operate(operator);
-
-        number1 = Number(display.textContent);
-        
+    if(number2 === null && display.textContent === ''){
         operator = '-';
     }
-    else{   
-    number1 = Number(display.textContent);
+    else{
+        if(operator !== null){
+            number2 = Number(display.textContent);
+
+            operate(operator);
+
+            number1 = Number(display.textContent);
+        
+            operator = '-';
+        }
+        else{   
+            number1 = Number(display.textContent);
    
-    operator = '-';   
-    }
+            operator = '-';   
+        }
     
-    if(number2 === null){
-        display.textContent = '';
+        if(number2 === null){
+            display.textContent = '';
+        }
     }
 })
 
