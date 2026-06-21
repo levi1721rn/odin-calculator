@@ -4,16 +4,16 @@ let number2;
 
 function operate(operator){
     if (operator === '+'){
-        display.textContent = (number1 + number2);
+        display.textContent = Number((number1 + number2).toFixed(2));
     }
     else if (operator === '-'){
-        display.textContent = (number1 - number2);
+        display.textContent = Number((number1 - number2).toFixed(2));
     }
     else if(operator === '*'){
-        display.textContent = (number1 * number2);
+        display.textContent = Number((number1 * number2).toFixed(2));
     }
     else if(operator === '/'){
-        display.textContent = (number1 / number2);
+        display.textContent = Number((number1 / number2).toFixed(2));
     }
 }
 
@@ -225,7 +225,7 @@ minus.addEventListener('click' , () => {
         
         operator = '-';
     }
-    else{
+    else{   
     number1 = Number(display.textContent);
    
     operator = '-';   
