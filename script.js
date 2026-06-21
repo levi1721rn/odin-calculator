@@ -168,14 +168,6 @@ zero.addEventListener('click' , () => {
     display.textContent += '0';
 })
 
-let clear = document.querySelector('.allclear');
-clear.addEventListener('click' , () => {
-    display.textContent = '';
-    number1 = null;
-    number2 = null;
-    operator = null;
-})
-
 let mul = document.querySelector('.multiply');
 mul.addEventListener('click' , () => {
     if(number2 === null && display.textContent === ''){
@@ -284,9 +276,30 @@ minus.addEventListener('click' , () => {
     }
 })
 
+
+let clear = document.querySelector('.allclear');
+clear.addEventListener('click' , () => {
+    display.textContent = '';
+    number1 = null;
+    number2 = null;
+    operator = null;
+    dot.style.backgroundColor = 'azure';
+})
+
 let equalto = document.querySelector('.equalto');
 equalto.addEventListener('click', () =>{
     let num2 = display.textContent;
     number2 = Number(num2);
     operate(operator);
 });
+
+let dot = document.querySelector('.dot');
+dot.addEventListener('click',() => {
+    if(display.textContent.includes('.')){
+        display.textContent += '';
+    }
+    else{
+        display.textContent += '.';
+    }
+    dot.style.backgroundColor = 'grey';
+})
